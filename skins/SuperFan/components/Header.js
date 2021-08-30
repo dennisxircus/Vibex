@@ -16,7 +16,7 @@ import { MdMenu, MdAccountCircle, MdAccountBalanceWallet } from 'react-icons/md'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import Link from 'next/link'
 export const AppHeader = ({ children }) => (
-	<Box bg='green.300' py={10} pos='fixed' w='full'>
+	<Box bg='green.300' py={4} pos='fixed' w='full'>
 		<Container maxW='full'>
 			<HStack>{children}</HStack>
 		</Container>
@@ -49,7 +49,7 @@ export const AppBrand = ({ logo, title = 'Vibex' }) => (
 const NavLinks = ['Explore', 'Creators', 'Leaderboard', 'Blog', 'About']
 export const Navigation = ({ navItems = NavLinks }) => (
 	<Fragment>
-		<Stack direction='row' spacing='24px'>
+		<HStack display={{ base: 'none', md: 'flex' }} spacing='24px'>
 			{navItems.map((item, index) => (
 				<Link key={index} href='{`/${item}`}'>
 					<Text color='white' _hover={{ cursor: 'pointer' }}>
@@ -57,7 +57,7 @@ export const Navigation = ({ navItems = NavLinks }) => (
 					</Text>
 				</Link>
 			))}
-		</Stack>
+		</HStack>
 		<Spacer />
 		<Flex align='center' justify='end'>
 			<IconButton

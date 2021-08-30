@@ -14,7 +14,7 @@ import { useWallet } from 'use-wallet'
 
 import useGlobal from '../../../pages/hooks/useGlobal'
 
-import { AppHeader, AppBrand, AppSpacer, ConnectWallet } from '../components/Header'
+import { AppHeader, AppBrand, AppSpacer, ConnectWallet, Navigation } from '../components/Header'
 import { CopyAddress } from '../components/Copy'
 
 const AppLayout = ({ children }) => {
@@ -22,7 +22,6 @@ const AppLayout = ({ children }) => {
 		<Box>
 			<AppHeader>
 				<AppBrand />
-				<Spacer />
 			</AppHeader>
 			<AppSpacer />
 			{children}
